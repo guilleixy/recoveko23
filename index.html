@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recoveko</title>
+
+    <link rel="stylesheet" type="text/css" href="estilos/reset.css">
+    <link rel="stylesheet" type="text/css" href="estilos/style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <header class="flex justify-between align-center fixed top-left-0 z-index2 background-black width-100">
+        <nav class="width-33 text-center">
+            <ul>
+                <li>
+                    conciertos
+                </li>
+                <li>
+                    música
+                </li>
+                <li>
+                    biografía
+                </li>
+            </ul>
+        </nav>
+        <h1 class="width-33 text-center">rock</h1>
+        <a class="width-33 text-center pointer" href="">tienda</a>
+    </header>
+    <main>
+        <section>
+<!-- 1. The <iframe> (video player) will replace this <div> tag. -->
+    <div class="iframe-container">
+        <div id="player"></div>
+      </div>
+      <script>
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+      
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+        
+  // Cambia el ID del elemento contenedor a "player" en el objeto YT.Player
+  player = new YT.Player('player', {
+    videoId: 'MDErQ1KTzaI',
+    width: 560,
+    height: 316,
+    playerVars: {
+      autoplay: 1,
+      playsinline: 1,
+      muted: 1,
+      controls: 0,
+      rel: 0,
+      showinfo: 0,
+      modestbranding: 1,
+      loop: 1,
+      playlist: 'MDErQ1KTzaI',
+      fs: 0,
+      cc_load_policy: 0,
+      iv_load_policy: 3,
+      autohide: 1,
+    },
+    events: {
+      onReady: onPlayerReady
+    }
+  });
+
+  function onPlayerReady(event) {
+    event.target.mute();
+    event.target.playVideo();
+  }}
+      </script>
+      
+      <style>
+      /* Make the youtube video responsive */
+        .iframe-container{
+          position: relative;
+          width: 100%;
+          padding-bottom: 56.25%;
+          height: 0;
+        }
+        .iframe-container iframe{
+          position: absolute;
+          top:0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      </style>
+        <section class="height-100vh flex flex-column align-center">
+            <h2>¡Escucha nuestro último single!</h2>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4SFnGr7vly55T2PBLYtZ6c?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5HvP4MmVoyDkJ9tv01rO3W?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <p>ya disponible</p>
+        </section>
+        <section class="height-100vh white-paper-background text-black flex justify-center">
+            <h2>merchandising</h2>
+        </section>
+        <section class="height-100vh flex justify-center">
+            <h2>conciertos</h2>
+        </section>
+        <footer class="white-paper-background">
+
+        </footer>
+    </main>
+    <div class="fixed height-100vh width-100 black-paper-background background-cover top-left-0 z-index-1"></div>
+</body>
+</html>
