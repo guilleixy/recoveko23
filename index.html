@@ -37,7 +37,7 @@
                 <a class="pointer underline-animation relative text-center" href="">música</a>
             </li>
             <li>
-                <a class="pointer underline-animation relative text-center" href="">
+                <a class="pointer underline-animation relative text-center" href="bio.html">
                     biografía
                 </a>
             </li>
@@ -68,7 +68,7 @@
         
   // Cambia el ID del elemento contenedor a "player" en el objeto YT.Player
   player = new YT.Player('player', {
-    videoId: 'astISOttCQ0',
+    videoId: 'iu_pWCcLUsk',
     width: 560,
     height: 316,
     playerVars: {
@@ -80,14 +80,27 @@
       showinfo: 0,
       modestbranding: 1,
       loop: 1,
-      playlist: 'astISOttCQ0',
+      playlist: 'iu_pWCcLUsk',
       fs: 0,
       cc_load_policy: 0,
       iv_load_policy: 3,
       autohide: 1,
+      modestbranding: 1
     },
     events: {
-      onReady: onPlayerReady
+      onReady: function(e) {
+                    e.target.mute();
+                    
+                    $('.bt-play-j').click(function(event) {
+                        setTimeout(() => {
+                            player.playVideo();
+                            e.target.unMute();    
+                        }, 1000);
+                        
+                        $('.bt-play-j').remove();
+                        $('#muteYouTubeVideoPlayer').show();
+                    });
+                }
     }
   });
 
@@ -114,7 +127,7 @@
         }
       </style>
       </section>
-        <section class="height-100vh flex flex-column align-center justify-evenly">
+        <section class="height-100vh flex flex-column align-center justify-evenly relative">
           <div>
             <h2>¡Escucha nuestro último single!</h2>
             <ul class="flex justify-evenly font-size-1 width-100">
@@ -125,59 +138,105 @@
           </div>
           <div class="border-radius-1 overflow-hidden relative hover-zoom hover-filter-brightness all-0-3-easeout">
             <a href="http://" target="_blank" rel="noopener noreferrer" class=""><i class="fa-regular fa-circle-play absolute absolute-center z-index2 font-size-2"></i>
-            <img src="imagenes/portada_prueba.jpg" alt="" class="parallax-smooth"></a>
+            <img src="imagenes/portada_prueba.jpg" alt="" class="parallax-smooth" draggable="false"></a>
           </div>
           <div class="flex flex-column align-center">
             <p>Dracukeo ya disponible</p>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0oa9Tz96GruIbaL6borlXM?utm_source=generator" width="100%" height="82" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
           </div>
+          <div class="absolute horizontal-line-effect overflow-hidden mobile-hidden">
+            <div class="relative flex align-center height-100">
+              <div class="flex absolute" id="horizontal-line-1">
+                <img class="horizontal-line-img" src="imagenes/vectores/Recurso 1.svg" alt="">
+                <img class="horizontal-line-img" src="imagenes/vectores/Recurso 3.svg" alt="">
+                <img class="horizontal-line-img" src="imagenes/vectores/Recurso 4.svg" alt="">
+                <img class="horizontal-line-img" src="imagenes/vectores/Recurso 5.svg" alt="">
+                <img class="horizontal-line-img" src="imagenes/vectores/Recurso 7.svg" alt="">
+                <img class="horizontal-line-img" src="imagenes/vectores/Recurso 8.svg" alt="">
+                <img class="horizontal-line-img" src="imagenes/vectores/Recurso 9.svg" alt="">
+                <img class="horizontal-line-img" src="imagenes/vectores/Recurso 10.svg" alt="">
+              </div>
+            </div>
+          </div>
         </section>
         <section class="height-100vh height-mobile-auto white-paper-background text-black flex flex-column align-center">
             <h2>merchandising</h2>
-
             <div class="flex flex-wrap justify-center">
               <div class="flex flex-column align-center">
-                <img src="imagenes/merch/camiseta_negra.png" alt="">
-                <ul class="font-size-small-1">
-                  <li class="inline-block border-radius-2 background-black text-white small-padding-lr-1">Edición limitada</li>
-                </ul>
+                <img height="360" class="parallax-smooth" src="imagenes/merch/camiseta_negra.png" alt="">
                 <h3>Camiseta Negra</h3>
-                <a class="black-border-1 small-padding-1 bywhover all-0-3-easeout relative z-index2 hover-zoom-out" href="">Comprar<i class="fa-solid fa-cart-shopping"></i></a>
-              </div>
-              <div class="flex flex-column align-center">
-                <img src="imagenes/merch/camiseta_blanca.png" alt="">
-                <ul class="font-size-small-1">
+                <ul class="font-size-small-1 default">
                   <li class="inline-block border-radius-2 background-black text-white small-padding-lr-1">Edición limitada</li>
                 </ul>
-                <h3>Camiseta Blanca</h3>
                 <a class="black-border-1 small-padding-1 bywhover all-0-3-easeout relative z-index2 hover-zoom-out" href="">Comprar<i class="fa-solid fa-cart-shopping"></i></a>
               </div>
               <div class="flex flex-column align-center">
-                <img src="imagenes/merch/cd.png" alt="">
-                <ul class="font-size-small-1">
+                <img height="360" class="parallax-smooth" src="imagenes/merch/camiseta_blanca.png" alt="">
+                <h3>Camiseta Blanca</h3>
+                <ul class="font-size-small-1 default">
+                  <li class="inline-block border-radius-2 background-black text-white small-padding-lr-1">Edición limitada</li>
+                </ul>
+                <a class="black-border-1 small-padding-1 bywhover all-0-3-easeout relative z-index2 hover-zoom-out" href="">Comprar<i class="fa-solid fa-cart-shopping"></i></a>
+              </div>
+              <div class="flex flex-column align-center">
+                <img height="360" class="parallax-smooth" src="imagenes/merch/cd.png" alt="">
+                <h3>Disco Firmado</h3>
+                <ul class="font-size-small-1 default">
                   <li class="inline-block border-radius-2 background-black text-white small-padding-lr-1">Firmado</li>
                   <li class="inline-block border-radius-2 background-black text-white small-padding-lr-1">Edición especial</li>
                   <li class="inline-block border-radius-2 background-black text-white small-padding-lr-1">Edición limitada</li>
                 </ul>
-                <h3>Disco Firmado</h3>
                 <a class="black-border-1 small-padding-1 bywhover all-0-3-easeout relative z-index2 hover-zoom-out" href="">Comprar<i class="fa-solid fa-cart-shopping"></i></a>
               </div>
             </div>
-
-
-
         </section>
-        <section class="height-100vh flex flex-column align-center justify-between">
+        <section class="height-100vh flex flex-column align-center">
             <h2 class="text-center">conciertos</h2>
-            <p>¡Vaya! Aún no hay conciertos anunciados.</p>
-            <p>¡Pronto más!</p>
+            <!-- <p>¡Vaya! Aún no hay conciertos anunciados.</p> -->
+            <table>
+              <caption>gira 2023</caption>
+              <!-- <thead>
+                <tr>
+                  <th>fecha</th>
+                  <th>lugar</th>
+                  <th>entradas</th>
+                </tr>
+              </thead> -->
+              <tbody>
+                <tr>
+                  <td>17/Noviembre/23</td>
+                  <td><a class="relative underline-animation" href="https://maps.app.goo.gl/RKpM8M9qekhmofL19" target="_blank">BARCELONA (SP) – Sala Upload</a></td>
+                  <td><a class="relative underline-animation" href="">entradas</a></td>
+                </tr>
+                <tr>
+                  <td>19/Enero/24</td>
+                  <td><a class="relative underline-animation" href="https://maps.app.goo.gl/mXJXv5Lai33qcCNZ6" target="_blank">MADRID (SP) – Independance Club</a></td>
+                  <td><a class="relative underline-animation" href="">entradas</a></td>
+                </tr>
+              </tbody>
+            </table>
+            
         </section>
-        <footer class="white-paper-background">
-
+        <footer class="white-paper-background text-black flex align-center justify-evenly">
+          <div>
+            <h3>Síguenos</h3>
+            <ul class="flex">
+              <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-spotify"></i></a></li>
+            </ul>
+          </div>
+          <div class="text-right">
+            <h3>Guillermo Bernal</h3>
+            <p>2023</p>
+            <p>Todos los derechos reservados</p>
+          </div>
         </footer>
     </main>
     <div class="fixed height-100vh width-100 black-paper-background background-cover top-left-0 z-index-1"></div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 <script src="javascript/parallax.js"></script>
+<script src="javascript/horizontal.js"></script>
 </html>

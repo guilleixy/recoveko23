@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock</title>
+
+    <link rel="shortcut icon" href="imagenes/r_logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="estilos/reset.css">
+    <link rel="stylesheet" type="text/css" href="estilos/style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b13fab0a20.js" crossorigin="anonymous"></script>    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <header class="flex align-center fixed top-left-0 z-index3 background-black width-100 justify-evenly">
+        <nav class="width-33 text-center">
+          <!-- <div class="pc-hidden"> -->
+          <input type="checkbox" id="menu-checkbox">
+          <label class="hamburger flex align-center justify-center menu-checkbox pc-hidden mobile-center" for="menu-checkbox">
+            <svg viewBox="0 0 32 32">
+              <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+              <path class="line" d="M7 16 27 16"></path>
+            </svg>
+          </label>
+          <!-- </div> -->
+          <ul class="nav-ul all-0-3-easeout">
+            <li>
+                <a class="pointer underline-animation relative text-center" href="">conciertos</a>
+            </li>
+            <li>
+                <a class="pointer underline-animation relative text-center" href="">música</a>
+            </li>
+            <li>
+                <a class="pointer underline-animation relative text-center" href="index.html">
+                    inicio
+                </a>
+            </li>
+          </ul>
+        </nav>
+        <h1 class="width-33 text-center pointer underline-animation">rock</h1>
+        <div class="width-33 text-center"><a class="pointer underline-animation relative" href="">tienda</a></div>
+    </header>
+    <main>
+        <section class="height-100vh flex flex-column align-center justify-evenly">
+        <footer class="white-paper-background text-black flex align-center justify-evenly width-100">
+          <div>
+            <h3>Síguenos</h3>
+            <ul class="flex">
+              <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-spotify"></i></a></li>
+            </ul>
+          </div>
+          <div class="text-right">
+            <h3>Guillermo Bernal</h3>
+            <p>2023</p>
+            <p>Todos los derechos reservados</p>
+          </div>
+        </footer>
+    </main>
+    <div class="fixed height-100vh width-100 black-paper-background background-cover top-left-0 z-index-1"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+<script src="javascript/parallax.js"></script>
+</html>
