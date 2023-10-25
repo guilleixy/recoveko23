@@ -209,6 +209,10 @@ ul{
     padding-bottom: 0.4rem;
 }
 
+.padding-1{
+    padding: 3rem;
+}
+
 /* estilos de bordes */
 
 .border-radius-1{
@@ -303,7 +307,7 @@ ul{
 
 .horizontal-line-effect{
     height: var(--horizontal-line-height);
-    width: 400px;
+    width: 60%;
     top: calc(100vh - (var(--horizontal-line-height) / 2));
     left: 0;
     background: rgb(255,255,255);
