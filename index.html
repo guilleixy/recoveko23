@@ -14,49 +14,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b13fab0a20.js" crossorigin="anonymous"></script>    
 
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 <body>
-    <header class="flex justify-between align-center fixed top-left-0 z-index2 background-black width-100">
+    <header class="flex align-center fixed top-left-0 z-index3 background-black width-100 justify-evenly">
         <nav class="width-33 text-center">
-        <div class="pc-hidden">
-          <label class="hamburger flex align-center justify-center">
-            <input type="checkbox">
+          <!-- <div class="pc-hidden"> -->
+          <input type="checkbox" id="menu-checkbox">
+          <label class="hamburger flex align-center justify-center menu-checkbox pc-hidden mobile-center" for="menu-checkbox">
             <svg viewBox="0 0 32 32">
               <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
               <path class="line" d="M7 16 27 16"></path>
             </svg>
           </label>
-        </div>
-
-          <ul class="mobile-hidden">
+          <!-- </div> -->
+          <ul class="nav-ul all-0-3-easeout">
             <li>
-                <a class="pointer" href="">
-                    conciertos                        
-                </a>
+                <a class="pointer underline-animation relative text-center" href="">conciertos</a>
             </li>
             <li>
-                <a class="pointer" href="">
-                    música
-                </a>
+                <a class="pointer underline-animation relative text-center" href="">música</a>
             </li>
             <li>
-                <a class="pointer" href="">
+                <a class="pointer underline-animation relative text-center" href="">
                     biografía
                 </a>
             </li>
           </ul>
         </nav>
-        <h1 class="width-33 text-center pointer">recoveko</h1>
-        <a class="width-33 text-center pointer" href="">tienda</a>
+        <h1 class="width-33 text-center pointer underline-animation">recoveko</h1>
+        <div class="width-33 text-center"><a class="pointer underline-animation relative" href="">tienda</a></div>
     </header>
     <main>
         <section>
-          <div class="recoveko1-background background-cover width-100 absolute"></div>
+          <!-- <div class="recoveko1-background background-cover height-100vh width-100 absolute"></div> -->
 <!-- 1. The <iframe> (video player) will replace this <div> tag. -->
-    <div class="iframe-container mobile-hidden">
+    <div class="iframe-container">
         <div id="player"></div>
       </div>
       <script>
@@ -74,7 +68,7 @@
         
   // Cambia el ID del elemento contenedor a "player" en el objeto YT.Player
   player = new YT.Player('player', {
-    videoId: 'MDErQ1KTzaI',
+    videoId: 'astISOttCQ0',
     width: 560,
     height: 316,
     playerVars: {
@@ -86,7 +80,7 @@
       showinfo: 0,
       modestbranding: 1,
       loop: 1,
-      playlist: 'MDErQ1KTzaI',
+      playlist: 'astISOttCQ0',
       fs: 0,
       cc_load_policy: 0,
       iv_load_policy: 3,
@@ -119,17 +113,64 @@
           height: 100%;
         }
       </style>
+      </section>
         <section class="height-100vh flex flex-column align-center justify-evenly">
+          <div>
             <h2>¡Escucha nuestro último single!</h2>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4SFnGr7vly55T2PBLYtZ6c?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5HvP4MmVoyDkJ9tv01rO3W?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <p>ya disponible</p>
+            <ul class="flex justify-evenly font-size-1 width-100">
+              <li><a class="hover-grey all-0-3-easeout" href=""><i class="fa-brands fa-spotify"></i></a></li>
+              <li><a class="hover-grey all-0-3-easeout"  href=""><i class="fa-brands fa-youtube"></i></a></li>
+              <li><a class="hover-grey all-0-3-easeout"  href=""><i class="fa-brands fa-apple"></i></a></li>
+            </ul>            
+          </div>
+          <div class="border-radius-1 overflow-hidden relative hover-zoom hover-filter-brightness all-0-3-easeout">
+            <a href="http://" target="_blank" rel="noopener noreferrer" class=""><i class="fa-regular fa-circle-play absolute absolute-center z-index2 font-size-2"></i>
+            <img src="imagenes/portada_prueba.jpg" alt="" class="parallax-smooth"></a>
+          </div>
+          <div class="flex flex-column align-center">
+            <p>Dracukeo ya disponible</p>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0oa9Tz96GruIbaL6borlXM?utm_source=generator" width="100%" height="82" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
         </section>
-        <section class="height-100vh white-paper-background text-black flex justify-center">
+        <section class="height-100vh height-mobile-auto white-paper-background text-black flex flex-column align-center">
             <h2>merchandising</h2>
+
+            <div class="flex flex-wrap justify-center">
+              <div class="flex flex-column align-center">
+                <img src="imagenes/merch/camiseta_negra.png" alt="">
+                <ul class="font-size-small-1">
+                  <li class="inline-block border-radius-2 background-black text-white small-padding-lr-1">Edición limitada</li>
+                </ul>
+                <h3>Camiseta Negra</h3>
+                <a class="black-border-1 small-padding-1 bywhover all-0-3-easeout relative z-index2 hover-zoom-out" href="">Comprar<i class="fa-solid fa-cart-shopping"></i></a>
+              </div>
+              <div class="flex flex-column align-center">
+                <img src="imagenes/merch/camiseta_blanca.png" alt="">
+                <ul class="font-size-small-1">
+                  <li class="inline-block border-radius-2 background-black text-white small-padding-lr-1">Edición limitada</li>
+                </ul>
+                <h3>Camiseta Blanca</h3>
+                <a class="black-border-1 small-padding-1 bywhover all-0-3-easeout relative z-index2 hover-zoom-out" href="">Comprar<i class="fa-solid fa-cart-shopping"></i></a>
+              </div>
+              <div class="flex flex-column align-center">
+                <img src="imagenes/merch/cd.png" alt="">
+                <ul class="font-size-small-1">
+                  <li class="inline-block border-radius-2 background-black text-white small-padding-lr-1">Firmado</li>
+                  <li class="inline-block border-radius-2 background-black text-white small-padding-lr-1">Edición especial</li>
+                  <li class="inline-block border-radius-2 background-black text-white small-padding-lr-1">Edición limitada</li>
+                </ul>
+                <h3>Disco Firmado</h3>
+                <a class="black-border-1 small-padding-1 bywhover all-0-3-easeout relative z-index2 hover-zoom-out" href="">Comprar<i class="fa-solid fa-cart-shopping"></i></a>
+              </div>
+            </div>
+
+
+
         </section>
-        <section class="height-100vh flex justify-center">
-            <h2>conciertos</h2>
+        <section class="height-100vh flex flex-column align-center justify-between">
+            <h2 class="text-center">conciertos</h2>
+            <p>¡Vaya! Aún no hay conciertos anunciados.</p>
+            <p>¡Pronto más!</p>
         </section>
         <footer class="white-paper-background">
 
@@ -137,4 +178,6 @@
     </main>
     <div class="fixed height-100vh width-100 black-paper-background background-cover top-left-0 z-index-1"></div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+<script src="javascript/parallax.js"></script>
 </html>

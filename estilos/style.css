@@ -2,10 +2,12 @@
 :root {
 
     --header-height: 10vh;
+    --footer-height: 20vh;
+
 
     --text-white: #ffffff;
     --text-black: #000000;
-
+    --text-grey: #b9b9b9;
   }
 
 /* estilos generales */
@@ -19,6 +21,10 @@ body{
 
 header{
     height: var(--header-height);
+}
+
+footer{
+    height: var(--footer-height);
 }
 
 h1{
@@ -45,6 +51,14 @@ ul{
     z-index: 2;
 }
 
+.z-index3{
+    z-index: 3;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
 .pointer:hover{
     cursor: pointer;
 }
@@ -63,6 +77,17 @@ ul{
     text-align: center;
 }
 
+.font-size-1{
+    font-size: 1.7rem;
+}
+
+.font-size-2{
+    font-size: 2.7rem;
+}
+
+.font-size-small-1{
+    font-size: 0.7rem;
+}
 
  /* estilos de position y display */
 .relative{
@@ -81,6 +106,10 @@ ul{
     position: sticky;
 }
 
+.inline-block{
+    display: inline-block;
+}
+
 .hidden{
     display: none;
 }
@@ -90,6 +119,12 @@ ul{
     .top-left-0{
         top: 0;
         left: 0;
+    }
+
+    .absolute-center{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
 
 .flex{
@@ -118,6 +153,9 @@ ul{
         justify-content: space-evenly;
     }
 
+    .flex-wrap{
+        flex-wrap: wrap;
+    }
 
 /* estilos de tamaño */
 
@@ -131,6 +169,39 @@ ul{
 
 .width-33{
     width: 33%;
+}
+
+.width-33-pc{
+    width: 33%;
+}
+
+/* estilos de padding y margin */
+
+.small-padding-1{
+    padding: 0.5rem
+}
+
+.small-padding-lr-1{
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+/* estilos de bordes */
+
+.border-radius-1{
+    border-radius: 0.5rem;
+}
+
+.border-radius-2{
+    border-radius: 1.3rem;
+}
+
+.black-border-1{
+    border-color: var(--text-black);
+    border-style: solid;
+    border-width: 3px;
 }
 
  /* estilos de fondos */
@@ -147,18 +218,82 @@ ul{
     background-image: url(../imagenes/fondos/fondo-papel-blanco.jpg);
 }
 
-.recoveko1-background{
+/* .recoveko1-background{
     background-image: url(../imagenes/galeria/editada1.jpg);
-}
+} */
 
 .background-black{
     background-color: var(--text-black);
+}
+
+/* estilos de efectos */
+
+.underline-animation::before{
+    content: "";
+    position: absolute;
+    background-color: var(--text-white);
+    width: 0;
+    height: 2px;
+    transition: all 0.2s ease-out;
+    bottom: 0;
+    left: 0;
+}
+
+.underline-animation:hover::before{
+    width: 100%;
+}
+
+.hover-grey:hover{
+    color: var(--text-grey);
+}
+
+.hover-zoom:hover{
+    transform: scale(110%);
+}
+
+.hover-filter-brightness:hover{
+    filter: brightness(80%);
+}
+
+.hover-zoom-out:hover{
+    transform: scale(95%);
+}
+
+.bywhover:hover{
+    color: var(--text-white);
+}
+
+.bywhover::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--text-black);
+    transition: all 0.3s ease-out;
+    z-index: -1;
+}
+
+.bywhover:hover::before{
+    width: 100%;
+}
+
+/* estilos para transiciones */
+.all-0-3-easeout{
+    transition: all 0.3s ease-out;
 }
 
 /* estilos para responsive */
 .pc-hidden{
     display: none;
 }
+
+#menu-checkbox:checked ~ .nav-ul {
+    left: 0 !important;
+}
+
+
 
 /* estilos de la hamburguesa */
 
@@ -167,9 +302,16 @@ ul{
   }
   
   .hamburger input {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    left: 20px;
+    z-index:500
   }
   
+  #menu-checkbox{
+    display: none;
+  }
+
   .hamburger svg {
     /* The size of the SVG defines the overall size */
     height: 2em;
@@ -192,21 +334,42 @@ ul{
     stroke-dasharray: 12 63;
   }
   
-  .hamburger input:checked + svg {
+  #menu-checkbox:checked ~ label > svg {
     transform: rotate(-45deg);
   }
   
-  .hamburger input:checked + svg .line-top-bottom {
+  #menu-checkbox:checked ~label > svg .line-top-bottom {
     stroke-dasharray: 20 300;
     stroke-dashoffset: -32.42;
   }
   
-
 @media(max-width: 710px){
+    .width-33-pc{
+        width: auto;
+    }
     .pc-hidden{
         display: inherit;
     }
     .mobile-hidden{
         display: none;
+    }
+    .pc-justify-evenly{
+        justify-content: space-evenly;
+    }
+    .nav-ul{
+        display: flex;
+        position: absolute;
+        left: -100%;
+        flex-direction: column;
+        background-color: var(--text-black);
+        height: 100vh;
+        width: 100%;
+    }
+    .mobile-center{
+        display: grid;
+        place-items: center;
+    }
+    .height-mobile-auto{
+        height: auto;
     }
 }
