@@ -1,4 +1,3 @@
- 
 :root {
 
     --header-height: 10vh;
@@ -45,6 +44,10 @@ ul{
     all: unset;
 }
 
+.table-center{
+    table-layout: fixed;
+}
+
 .z-index-1{
     z-index: -1;
 }
@@ -86,6 +89,10 @@ ul{
     text-align: right;
 }
 
+.text-left{
+    text-align: left;
+}
+
 .font-size-1{
     font-size: 1.7rem;
 }
@@ -96,6 +103,15 @@ ul{
 
 .font-size-small-1{
     font-size: 0.7rem;
+}
+
+.text-no-wrap{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-wrap{
+    white-space: normal;
 }
 
  /* estilos de position y display */
@@ -192,6 +208,14 @@ ul{
     width: 33%;
 }
 
+.width-20{
+    width: 20%;
+}
+
+.width-66{
+    width: 66%;
+}
+
 .width-33-pc{
     width: 33%;
 }
@@ -211,6 +235,10 @@ ul{
 
 .padding-1{
     padding: 3rem;
+}
+
+.margin-0-auto{
+    margin: 0 auto;
 }
 
 /* estilos de bordes */
@@ -336,8 +364,6 @@ ul{
     left: 0 !important;
 }
 
-
-
 /* estilos de la hamburguesa */
 
 .hamburger {
@@ -417,5 +443,11 @@ ul{
     .mobile-center{
         display: grid;
         place-items: center;
+    }
+    .width-100-mobile{
+        width: 100%;
+    }
+    .mobile-block{
+        display: block;    
     }
 }

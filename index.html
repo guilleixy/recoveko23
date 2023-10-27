@@ -43,7 +43,7 @@
             </li>
           </ul>
         </nav>
-        <h1 class="width-33 text-center pointer underline-animation">recoveko</h1>
+        <h1 class="width-33 text-center pointer underline-animation text-no-wrap">recoveko</h1>
         <div class="width-33 text-center"><a class="pointer underline-animation relative" href="">tienda</a></div>
     </header>
     <main>
@@ -204,35 +204,55 @@
               </div>
             </div>
         </section>
-        <section class="height-100vh flex flex-column align-center">
+        <section class="flex flex-column align-center">
             <div>
               <h2 class="text-center">conciertos</h2>     
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="white" d="M17 15.586 6.707 5.293 5.293 6.707 15.586 17H7v2h12V7h-2v8.586z"/></svg>         
+              <svg style="float: right;" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="white" d="M17 15.586 6.707 5.293 5.293 6.707 15.586 17H7v2h12V7h-2v8.586z"/></svg>         
             </div>
-
             <!-- <p>¡Vaya! Aún no hay conciertos anunciados.</p> -->
-            <table>
-              <caption>gira 2023</caption>
-              <!-- <thead>
-                <tr>
-                  <th>fecha</th>
-                  <th>lugar</th>
-                  <th>entradas</th>
-                </tr>
-              </thead> -->
-              <tbody>
-                <tr>
-                  <td>17/Noviembre/23</td>
-                  <td><a class="relative underline-animation" href="https://maps.app.goo.gl/RKpM8M9qekhmofL19" target="_blank">BARCELONA (SP) – Sala Upload</a></td>
-                  <td><a class="relative underline-animation" href="">entradas</a></td>
-                </tr>
-                <tr>
-                  <td>19/Enero/24</td>
-                  <td><a class="relative underline-animation" href="https://maps.app.goo.gl/mXJXv5Lai33qcCNZ6" target="_blank">MADRID (SP) – Independance Club</a></td>
-                  <td><a class="relative underline-animation" href="">entradas</a></td>
-                </tr>
-              </tbody>
-            </table>
+            <article>
+              <table class="width-66 table-center text-center margin-0-auto width-100-mobile">
+                <caption><h3>gira 2023</h3></caption>
+                <!-- <thead>
+                  <tr>
+                    <th><i class="fas fa-x"></i></th>
+                    <th><i class="fas fa-bolt"></i></th>
+                    <th><i class="fas fa-fire"></i></th>
+                    <th><i class="fa-brands fa-affiliatetheme"></i></th>
+                    <th><i class="fas fa-heart"></i></th>
+                  </tr>                
+                </thead> -->
+                <tbody>
+                  <tr class="text-wrap">
+                    <td class="text-left mobile-block">17/Nov/23</td>
+                    <td class="mobile-block"><a class="relative underline-animation" href="https://maps.app.goo.gl/RKpM8M9qekhmofL19" target="_blank">BARCELONA (ES) – Sala Upload</a></td>
+                    <td class="text-right mobile-block"><a class="relative underline-animation" href="">entradas</a></td>
+                  </tr>
+                  <tr class="">
+                    <td class="text-left mobile-block">19/Ene/24</td>
+                    <td class="mobile-block"><a class="relative underline-animation" href="https://maps.app.goo.gl/mXJXv5Lai33qcCNZ6" target="_blank">MADRID (ES) – Independance Club</a></td>
+                    <td class="text-right mobile-block"><a class="relative underline-animation" href="">entradas</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+            <article class="width-66 width-100-mobile">
+              <h3>Conciertos pasados</h3>
+              <h4>Noviembre/23</h4>
+                <li>
+                  <span>12/Nov/23</span>
+                  <span><i class="fa-brands fa-affiliatetheme"></i></span>
+                  <span>ZARAGOZA (ES) - HypeMe Fest Sala Malandar</span>
+                </li>             
+              <h4>Octubre/23</h4>
+              <ul>
+                <li>
+                  <span>06/Oct/23</span>
+                  <span><i class="fas fa-bolt"></i></span>
+                  <span>SEVILLA (ES) - HypeMe Fest Sala Malandar</span>
+                </li>
+              </ul>
+            </article>
             
         </section>
         <footer class="white-paper-background text-black flex align-center justify-evenly">
