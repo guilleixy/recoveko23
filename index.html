@@ -38,8 +38,12 @@
             </li>
             <li>
                 <a class="pointer underline-animation relative text-center" href="bio.html">
-                    biografía
-                </a>
+                  biografías</a>
+            </li>
+            <li>
+              <a class="pointer underline-animation relative text-center" href="contacto.html">
+                contacto
+              </a>              
             </li>
           </ul>
         </nav>
@@ -116,7 +120,9 @@
           position: relative;
           width: 100%;
           padding-bottom: 56.25%;
-          height: 0;
+          height: calc(100vh - var(--header-height));
+          margin-top: var(--header-height);
+          
         }
         .iframe-container iframe{
           position: absolute;
@@ -204,7 +210,7 @@
               </div>
             </div>
         </section>
-        <section class="flex flex-column align-center">
+        <section class="flex flex-column align-center padding-1">
             <div>
               <h2 class="text-center">conciertos</h2>     
               <svg style="float: right;" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="white" d="M17 15.586 6.707 5.293 5.293 6.707 15.586 17H7v2h12V7h-2v8.586z"/></svg>         
@@ -226,12 +232,20 @@
                   <tr class="text-wrap">
                     <td class="text-left mobile-block">17/Nov/23</td>
                     <td class="mobile-block"><a class="relative underline-animation" href="https://maps.app.goo.gl/RKpM8M9qekhmofL19" target="_blank">BARCELONA (ES) – Sala Upload</a></td>
-                    <td class="text-right mobile-block"><a class="relative underline-animation" href="">entradas</a></td>
+                    <td class="text-right mobile-block"><a class="relative underline-animation underline-perma-mobile" href="">entradas<span class="pc-hidden"><i class="fas fa-bolt"></i></span></a></td>
                   </tr>
                   <tr class="">
                     <td class="text-left mobile-block">19/Ene/24</td>
-                    <td class="mobile-block"><a class="relative underline-animation" href="https://maps.app.goo.gl/mXJXv5Lai33qcCNZ6" target="_blank">MADRID (ES) – Independance Club</a></td>
-                    <td class="text-right mobile-block"><a class="relative underline-animation" href="">entradas</a></td>
+                    <td class="mobile-block">
+
+                      <a class="relative underline-animation" href="https://maps.app.goo.gl/mXJXv5Lai33qcCNZ6" target="_blank">
+                        <span class="pc-hidden"><i class="fas fa-bolt"></i></span>
+                        MADRID (ES) – Independance Club
+                        <span class="pc-hidden"><i class="fas fa-bolt"></i></span>
+                      </a>
+
+                    </td>
+                    <td class="text-right mobile-block"><a class="relative underline-animation underline-perma-mobile" href="">entradas</a></td>
                   </tr>
                 </tbody>
               </table>

@@ -450,4 +450,7 @@ ul{
     .mobile-block{
         display: block;    
     }
+    .underline-perma-mobile{
+        text-decoration: underline var(--text-white) 1.5px;
+    }
 }
