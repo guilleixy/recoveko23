@@ -18,6 +18,7 @@
 
 </head>
 <body>
+  <!-- poner el fondo transparente y ek video detras quedara mejor pero tiene que ser oscuro -->
     <header class="flex align-center fixed top-left-0 z-index3 background-black width-100 justify-evenly">
         <nav class="width-33 text-center">
           <!-- <div class="pc-hidden"> -->
@@ -133,23 +134,24 @@
         }
       </style>
       </section>
-        <section class="height-100vh flex flex-column align-center justify-evenly relative">
+        <section class="flex flex-column align-center justify-evenly relative">
           <div>
             <h2>¡Escucha nuestro último single!</h2>
             <ul class="flex justify-evenly font-size-1 width-100">
-              <li><a class="hover-grey all-0-3-easeout" href=""><i class="fa-brands fa-spotify"></i></a></li>
-              <li><a class="hover-grey all-0-3-easeout"  href=""><i class="fa-brands fa-youtube"></i></a></li>
-              <li><a class="hover-grey all-0-3-easeout"  href=""><i class="fa-brands fa-apple"></i></a></li>
+              <li><a class="hover-opacity-out all-0-3-easeout" href=""><i class="fa-brands fa-spotify hover-zoom-out all-0-3-easeout"></i></a></li>
+              <li><a class="hover-opacity-out all-0-3-easeout"  href=""><i class="fa-brands fa-youtube hover-zoom-out all-0-3-easeout"></i></a></li>
+              <li><a class="hover-opacity-out all-0-3-easeout"  href=""><i class="fa-brands fa-apple hover-zoom-out all-0-3-easeout"></i></a></li>
             </ul>            
           </div>
           <div class="border-radius-1 overflow-hidden relative hover-zoom hover-filter-brightness all-0-3-easeout">
-            <a href="http://" target="_blank" rel="noopener noreferrer" class=""><i class="fa-regular fa-circle-play absolute absolute-center z-index2 font-size-2"></i>
-            <img src="imagenes/portada_prueba.jpg" alt="" class="parallax-ultra-smooth" draggable="false"></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer" class=""><i class="fa-regular fa-circle-play absolute absolute-center z-index2 font-size-2 text-shadow-black"></i>
+            <img height="400px" src="imagenes/fuego_portada.jpg" alt="" class="parallax-ultra-smooth" draggable="false"></a>
           </div>
           <div class="flex flex-column align-center">
-            <p>Dracukeo ya disponible</p>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0oa9Tz96GruIbaL6borlXM?utm_source=generator" width="100%" height="82" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
+            <p>Pasajeros ya disponible</p>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6OwXRyRLp43S3c8bPcJsbq?utm_source=generator" width="100%" height="82" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </section>
+        <section class="white-paper-background text-black flex flex-column align-center padding-1 relative">
           <div class="absolute horizontal-line-effect overflow-hidden mobile-hidden">
             <div class="relative flex align-center height-100">
               <div class="flex absolute" id="horizontal-line-1">
@@ -173,12 +175,9 @@
               </div>
             </div>
           </div>
-        </section>
-        <section class="height-100vh height-mobile-auto white-paper-background text-black flex flex-column align-center padding-1">
-            <div>
-                            <h2>merchandising</h2>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="m18.707 6.707-1.414-1.414L7 15.586V7H5v12h12v-2H8.414L18.707 6.707z"/></svg>
-
+            <div class="width-66 text-right">
+              <h2>merchandising</h2>
+              <svg  style="float: right; margin-right: 171px" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="m18.707 6.707-1.414-1.414L7 15.586V7H5v12h12v-2H8.414L18.707 6.707z"/></svg>
             </div>
 
             <div class="flex flex-wrap justify-center">
@@ -211,9 +210,9 @@
             </div>
         </section>
         <section class="flex flex-column align-center padding-1">
-            <div>
-              <h2 class="text-center">conciertos</h2>     
-              <svg style="float: right;" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="white" d="M17 15.586 6.707 5.293 5.293 6.707 15.586 17H7v2h12V7h-2v8.586z"/></svg>         
+            <div class="width-66">
+              <h2 class>conciertos</h2>     
+              <svg style="float: left; margin-left: 125px" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="white" d="M17 15.586 6.707 5.293 5.293 6.707 15.586 17H7v2h12V7h-2v8.586z"/></svg>         
             </div>
             <!-- <p>¡Vaya! Aún no hay conciertos anunciados.</p> -->
             <article>
@@ -251,21 +250,60 @@
               </table>
             </article>
             <article class="width-66 width-100-mobile">
-              <h3>Conciertos pasados</h3>
-              <h4>Noviembre/23</h4>
-                <li>
-                  <span>12/Nov/23</span>
-                  <span><i class="fa-brands fa-affiliatetheme"></i></span>
-                  <span>ZARAGOZA (ES) - HypeMe Fest Sala Malandar</span>
-                </li>             
-              <h4>Octubre/23</h4>
-              <ul>
-                <li>
-                  <span>06/Oct/23</span>
-                  <span><i class="fas fa-bolt"></i></span>
-                  <span>SEVILLA (ES) - HypeMe Fest Sala Malandar</span>
-                </li>
-              </ul>
+              <h3>Conciertos pasados</h3>     
+              <input type="checkbox" id="historico-conciertos" class="hidden">
+              <label for="historico-conciertos" class="label-mostrar-historico pointer">Mostrar conciertos pasados</label>
+              <label for="historico-conciertos" class="label-ocultar-historico pointer">Ocultar conciertos pasados</label>
+              <div class="historico-conciertos-wrapper all-0-3-easeout">
+                <h4>Septiembre/23</h4>
+                <ul>
+                  <li>
+                    <span>23/Sep/23</span>
+                    <span><i class="fas fa-bolt"></i></span>
+                    <span>ZARAGOZA (ES) - Festival Cauces</span>
+                  </li>
+                </ul>
+                <h4>Marzo/23</h4>
+                <ul>
+                  <li>
+                    <span>25/Mar/23</span>
+                    <span><i class="fas fa-bolt"></i></span>
+                    <span>ZARAGOZA (ES) - Sala Creedence (junto a Mantequilla Voladora)</span>
+                  </li>
+                </ul>
+                <h4>Enero/23</h4>
+                <ul>
+                  <li>
+                    <span>29/Ene/23</span>
+                    <span><i class="fas fa-bolt"></i></span>
+                    <span>ZARAGOZA (ES) - Pabellón Príncipe Felipe</span>
+                  </li>
+                </ul>
+                <h4>Diciembre/22</h4>
+                <ul>
+                  <li>
+                    <span>10/Dic/22</span>
+                    <span><i class="fas fa-bolt"></i></span>
+                    <span>ZARAGOZA (ES) - CSC Luis Buñuel</span>
+                  </li>
+                </ul>
+                <h4>Noviembre/22</h4>
+                <ul>
+                  <li>
+                    <span>18/Nov/22</span>
+                    <span><i class="fas fa-bolt"></i></span>
+                    <span>ZARAGOZA (ES) - Sala Creedence</span>
+                  </li>
+                </ul>
+                <h4>Octubre/21</h4>
+                <ul>
+                  <li>
+                    <span>26/Nov/21</span>
+                    <span><i class="fas fa-bolt"></i></span>
+                    <span>ZARAGOZA (ES) - Sala Z</span>
+                  </li>
+                </ul>
+              </div>    
             </article>
             
         </section>

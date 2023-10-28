@@ -257,6 +257,10 @@ ul{
     border-width: 3px;
 }
 
+.text-shadow-black {
+    text-shadow: 0px 0px 5px #000000;
+}
+
  /* estilos de fondos */
 
 .background-cover{
@@ -301,6 +305,10 @@ ul{
     color: var(--text-grey);
 }
 
+.hover-opacity-out:hover{
+    opacity: 0.4;
+}
+
 .hover-zoom:hover{
     transform: scale(105%);
 }
@@ -336,7 +344,7 @@ ul{
 .horizontal-line-effect{
     height: var(--horizontal-line-height);
     width: 60%;
-    top: calc(100vh - (var(--horizontal-line-height) / 2));
+    top: calc(0px - var(--horizontal-line-height) / 2);
     left: 0;
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,0.6362920168067228) 0%, rgba(0,0,0,1) 100%);
@@ -410,6 +418,31 @@ ul{
   #menu-checkbox:checked ~label > svg .line-top-bottom {
     stroke-dasharray: 20 300;
     stroke-dashoffset: -32.42;
+  }
+
+  /* checkbox conciertos */
+
+  .historico-conciertos-wrapper{
+    height: 0;
+    overflow: hidden;
+  }
+
+  .label-ocultar-historico{
+    display: none;
+  }
+
+
+  /* esto es cutre de cojones pero de momento funciona */
+  #historico-conciertos:checked ~ .historico-conciertos-wrapper{
+    height: 300px;
+  }
+
+  #historico-conciertos:checked ~ .label-ocultar-historico{
+    display: inherit;
+  }
+
+  #historico-conciertos:checked ~ .label-mostrar-historico{
+    display: none;
   }
 
 @media(max-width:1100px){
